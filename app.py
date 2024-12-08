@@ -14,8 +14,8 @@ app.secret_key = os.getenv("SECRET_KEY")  # For flashing messages
 
 
 # URL-encode your username and password
-username = quote_plus("shreyasmagdum")
-password = quote_plus("Shreyas@123")  # Encodes the '@' character
+username = quote_plus("Your username") #MongoDB Username
+password = quote_plus("Your Password")  #MongoDB Password
 
 # Connection string with encoded credentials
 connection_string = f"mongodb+srv://{username}:{password}@shreyas.e7byf.mongodb.net/"
@@ -28,7 +28,7 @@ db = client['weather_app']
 weather_collection = db['weather_data']
 
 # OpenWeatherMap API configuration
-API_KEY = os.getenv("WEATHER_API_KEY", "c9c4f75aed9854bf409844e059bf0f37")
+API_KEY = os.getenv("WEATHER_API_KEY", "Your API Key")
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 @app.route('/')
